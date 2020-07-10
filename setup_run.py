@@ -6,8 +6,6 @@ import glob
 
 home_pathdir           = os.path.abspath(sys.argv[1])
 experiments_pathdir    = os.path.abspath(sys.argv[2])
-work_pathdir           = os.path.abspath(sys.argv[3])
-
 
 def paths_file_to_dict(path_to_paths_file):
     paths_dict = dict()
@@ -60,7 +58,7 @@ def generate_programmed_config():
     with open(experiments_pathdir + "/programmed_config.ini", "w") as f:
         f.write(config)
 
-def setup_experiment(experimental_parameter_file):
+def setup_experiment(experimental_parameter_file, sim_paths):
     parameters_dict = parameters_file_to_dict(experimental_parameter_file)
 
     with open(experiments_pathdir + "/programmed_config.ini", "r") as f:
@@ -76,6 +74,7 @@ def setup_experiment(experimental_parameter_file):
 
     camisim_pathdir = experiment_pathdir + "/CAMISIM_output"
     os.mkdir(camisim_pathdir)
+    sim_paths.write(experiment_pathdir + "\n")
     config = config.replace("{OUTPUT_DIR}", camisim_pathdir)
 
     with open(experiment_pathdir + "/config.ini", "w") as f:
@@ -90,8 +89,7 @@ if __name__ == "__main__":
                       "====================\n")
     sys.stderr.write( "Home directory path:        {}"
                     "\nExperiments directory path: {}"
-                    "\nWork directory path:        {}"
-                    "\n\n".format(home_pathdir, experiments_pathdir, work_pathdir))
+                    "\n\n".format(home_pathdir, experiments_pathdir))
     sys.stderr.flush()
 
     experimental_parameters_pathdir = experiments_pathdir + "/parameters"
@@ -99,13 +97,17 @@ if __name__ == "__main__":
 
     generate_programmed_config()
 
+    sim_paths = open(experiments_pathdir + "/sim_paths.txt", "w")
+
     sys.stderr.write("Experimental parameters files:\n"
                       "====================\n")
     for experimental_parameter_file in os.listdir(experimental_parameters_pathdir):
         experimental_parameter_file = os.path.join(experimental_parameters_pathdir, experimental_parameter_file)
         sys.stderr.write(experimental_parameter_file + "\n")
         sys.stderr.flush()
-        setup_experiment(experimental_parameter_file)
+        setup_experiment(experimental_parameter_file, sim_paths)
+
+    sim_paths.close()
 
 
 

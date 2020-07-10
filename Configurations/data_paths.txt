@@ -1,0 +1,3 @@
+TAXDUMP=/Users/gabrielraulet/Development/SummerWork/metagenome_data/mac_test/taxonomy.tar.gz
+METADATA=/Users/gabrielraulet/Development/SummerWork/metagenome_data/mac_test/arctic-species-metadata.tsv
+ID_TO_GENOME=/Users/gabrielraulet/Development/SummerWork/metagenome_data/mac_test/arctic-species.tsv

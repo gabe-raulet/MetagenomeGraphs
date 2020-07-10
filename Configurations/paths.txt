@@ -1,0 +1,3 @@
+CONFIG_PATH=/Users/gabrielraulet/Development/SummerWork/MetaPipe/Configurations
+WORKDIR=/Users/gabrielraulet/Development/SummerWork/MetaPipe/work_dir
+TMP_DIR=/Users/gabrielraulet/Development/SummerWork/MetaPipe/tmp
