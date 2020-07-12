@@ -1,6 +1,6 @@
-CAMISIM=/global/homes/g/gabeh98/CAMISIM
+CAMISIM=/Users/gabrielraulet/Development/SummerWork/CAMISIM
 MINIMAP=/Users/gabrielraulet/Development/SummerWork/minimap2
-PBSIM=/global/homes/g/gabeh98/PBSIM/src/pbsim
-SAMTOOLS=/global/homes/g/gabeh98/CAMISIM/tools/samtools-1.3/samtools
-STRAIN_SIM=/global/homes/g/gabeh98/CAMISIM/scripts/StrainSimulationWrapper/sgEvolver/simulation_dir
-ERROR_PROFILES=/global/homes/g/gabeh98/PBSIM/data
+PBSIM=/Users/gabrielraulet/Development/SummerWork/CAMISIM/tools/PBSIM-PacBio-Simulator/src/pbsim
+SAMTOOLS=/Users/gabrielraulet/Development/SummerWork/CAMISIM/tools/samtools-1.3/samtools
+STRAIN_SIM=/Users/gabrielraulet/Development/SummerWork/CAMISIM/scripts/StrainSimulationWrapper/sgEvolver/simulation_dir
+ERROR_PROFILES=/Users/gabrielraulet/Development/SummerWork/CAMISIM/tools/PBSIM-PacBio-Simulator/data

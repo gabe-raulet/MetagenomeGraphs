@@ -1,3 +1,0 @@
-CONFIG_PATH=/global/homes/g/gabeh98/MetaPipe/Configurations
-WORKDIR=/global/cscratch1/sd/gabeh98/CAMISIM_work_folder
-TMP_DIR=/global/cscratch1/sd/gabeh98/tmp
