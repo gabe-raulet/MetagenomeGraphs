@@ -21,7 +21,7 @@ if __name__ == "__main__":
                      "#SBATCH --constraint={}\n"
                      "#SBATCH --ntasks={}\n\n".format(qos, number_of_experiments, time, computer_system, number_of_experiments))
 
-    sys.stdout.write("module load python\nconda activate camisim\n\n")
+    sys.stdout.write("conda activate camisim\n\n")
 
     sys.stdout.write("CAMISIM_PATH={}\n".format(camisim_path))
     #  sys.stdout.write("EXPERIMENTS_PATH={}\n\n".format(experiments_pathdir))
